@@ -1,0 +1,12 @@
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\SerandibNet.Data.dll.config
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\SerandibNet.Data.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\SerandibNet.Data.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\EntityFramework.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\SerandibNet.Model.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\SerandibNet.Model.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\EntityFramework.xml
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\obj\Debug\SerandibNet.Data.csprojResolveAssemblyReference.cache
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\obj\Debug\SerandibNet.Data.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Data\obj\Debug\SerandibNet.Data.pdb

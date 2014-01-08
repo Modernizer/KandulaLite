@@ -1,0 +1,34 @@
+﻿@using Microsoft.AspNet.Identity
+<li class="light-blue">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        <img class="nav-user-photo" alt="Jason's Photo" src="~/Content/application/images/user.png">
+        <span class="user-info">
+            <small>@Html.ActionLink("Welcome, " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })</small>
+        </span>
+        <i class="icon-caret-down"></i>
+    </a>
+    <ul class="user-menu dropdown-menu dropdown-yellow dropdown-caret dropdown-close pull-right">
+        <li>
+            <a href="javascript:void(0);">
+                <i class="icon-cog"></i>
+                Settings
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <i class="icon-user"></i>
+                Profile
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+               @using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                }
+        </li>
+    </ul>
+</li>
+
+

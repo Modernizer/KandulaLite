@@ -1,0 +1,32 @@
+﻿<div class="messageBox" style="width: 800px">
+
+    <div class="modal-header">
+        <h3>Select a Component</h3>
+    </div>
+
+    <div class="modal-body" style="max-height:600px">
+        <div id="setCompContainer">
+            <div data-kendo-role="grid"
+                data-kendo-sortable="true" data-kendo-editable="false" data-kendo-selectable="row" data-kendo-filterable="true"
+                data-kendo-navigatable="true"
+                data-kendo-columns='[{field: "applicationID",title: "Application ID", sortable:false, filterable:false}, {field: "name", title: "Name"}, {field: "status", title: "Status"}, {field: "applicationMatch",title: "Application Match"}]'
+                data-kendo-bind="source: dataSource, events: { change: change }" style="height: 400px;">
+            </div>
+        </div>
+
+        <div style="padding: 5px 30px 5px 0px;">
+            <div>
+                <div id="setCompPagerNext" class="btn-mini pagerNext" />
+                <div id="setCompPagerPrev" class="btn-mini pagerPrevious" />
+            </div>
+            <div class="rb-pager-status" style="text-align: right;"></div>
+        </div>
+    </div>
+
+    
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-kendo-bind="click: ok, enabled: selectionExist">Select</button>
+        <button class="btn btn-primary" data-kendo-bind="click: cancel">Cancel</button>
+    </div>
+
+</div>

@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="row">
+    <button id="btn-add-cust" class="btn btn-info btn-block"><i class="icon-plus-sign bigger-130"></i>&nbsp;add customer</button>
+    <br />
+    <table id="customer-list" class="table table-striped table-bordered table-hover">
+    </table>
+</div>
+
+<!--order model-->
+<div id="model-customer" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                Manage Customer Info
+            </div>
+            <!-- dialog body -->
+            <div class="modal-body">
+                <div class="form-horizontal" style="height: 450px; overflow-x: hidden; overflow-y: auto;">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Name </label>
+                        <div class="col-sm-9">
+                            <input id="txt-name" class="col-xs-10 col-sm-10" type="text" placeholder="">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="hr hr-24"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Line 1 </label>
+                        <div class="col-sm-9">
+                            <input id="txt-line1" class="col-xs-10 col-sm-10" type="text" placeholder="line 1">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Line 2 </label>
+                        <div class="col-sm-9">
+                            <input id="txt-line2" class="col-xs-10 col-sm-10" type="text" placeholder="line 2">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">City </label>
+                        <div class="col-sm-9">
+                            <input id="txt-city" class="col-xs-10 col-sm-10" type="text" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Contact number </label>
+                        <div class="col-sm-9">
+                            <input id="txt-cont-no" class="col-xs-10 col-sm-10" type="text" placeholder="contact number">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="hr hr-24"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">email </label>
+                        <div class="col-sm-9">
+                            <input id="txt-email" class="col-xs-10 col-sm-10" type="text" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">website </label>
+                        <div class="col-sm-9">
+                            <input id="txt-website" class="col-xs-10 col-sm-10" type="text" placeholder="website">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right">Description </label>
+                        <div class="col-sm-9">
+                            <textarea id="txt-description" class="col-xs-10"></textarea>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                </div>
+                <!-- dialog buttons -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/application/js/jquery.dataTables.min.js"></script>
+<script src="~/Content/application/js/jquery.dataTables.bootstrap.js"></script>
+<script src="~/Scripts/erp/manage_customer.js"></script>

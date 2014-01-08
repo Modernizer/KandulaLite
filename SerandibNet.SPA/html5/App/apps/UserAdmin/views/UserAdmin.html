@@ -1,0 +1,71 @@
+﻿<section>
+    <style type='text/css'>
+        .liveExample h3 {
+            line-height: 30px;
+        }
+
+        .readout {
+            width: 20em;
+        }
+
+            .readout td {
+                width: 50%;
+            }
+
+        .kotable {
+            width: 35em;
+        }
+
+        tr {
+            vertical-align: top;
+        }
+
+        td {
+            padding: 0.2em 0.2em 0.6em 0.2em;
+        }
+
+            td.kolabel {
+                text-align: right;
+                padding-right: 0.5em;
+            }
+
+        input[type=radio] {
+            margin: 0 0.25em 0 0.25em;
+        }
+    </style>
+    <div>
+        <h2>User Administration</h2>
+        <div class="well liveExample">
+            <div class="kotable">
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="kolabel">User Name:</td>
+                        <td><input data-bind="value: username" /></td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="kolabel">User Type</td>
+                        <td>
+                            <label><input type="radio" value="Developer" data-bind="checked: usertype" />Developer</label>
+                            <label><input type="radio" value="Tester" data-bind="checked: usertype" />Tester</label>
+                            <label><input type="radio" value="End User" data-bind="checked: usertype" />End User</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="kolabel"></td>
+                        <td>
+                            <button class="btn btn-sm btn-success pull-right" id="btn-save" type="button" >
+                                <i class=" icon-ok bigger-110">
+                                </i>
+                                Create User
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>						
+</section>
+
+

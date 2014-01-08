@@ -1,0 +1,63 @@
+﻿@*for demonstration only need actual data for notifications*@
+@model IEnumerable<SerandibNet.SPA.Models.Notification>
+@{
+    Layout = null;
+}
+
+<div class="user-profile">
+    <div class="tabbable">
+        <ul class="nav nav-tabs padding-18">
+            <li class="active">
+                <a href="#home" data-toggle="tab">
+                    <i class="green icon-user bigger-120"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="#messages" data-toggle="tab">
+                    <i class="orange icon-inbox bigger-120"></i>
+                    Messages
+                </a>
+            </li>
+            <li>
+                <a href="#notification" data-toggle="tab">
+                    <i class="orange icon-bell bigger-120"></i>
+                    Notifications
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content no-border padding-24">
+            <div id="home" class="tab-pane in active">
+                @Html.Partial("DashboardProfile")
+            </div>
+            <div id="messages" class="tab-pane">
+                @Html.Partial("Inbox")
+            </div>
+            <div id="notification" class="tab-pane">
+                @Html.Partial("NotificationBox", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function ChangeNotificationStatus(notiId, isRead, elem) {
+
+        $.ajax({
+            type: "POST",
+            url: '/User/ChangeNotificationStatus',
+            data: "{'notiId':" + notiId + ",'currentState':'" + isRead + "'}",
+            contentType: "application/json; charset=utf-8",
+            /*datatype is 'html since this returns updated partial view html'*/
+            dataType: "html",
+            async: false,
+            success: function (msg) {
+                /*rebind html with new content*/
+                $("#notification").html(msg);
+            },
+            /*error method defined in Scripts/erp/indexview.js*/
+            error: AjaxError
+        });
+    }
+
+</script>

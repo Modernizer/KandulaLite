@@ -1,0 +1,20 @@
+﻿<section>
+    <h2 data-bind="html: displayName"></h2>
+    <form>
+        <label>First Name:<input data-kendo-bind="value: firstName" /></label>
+        <label>Last Name:<input data-kendo-bind="value: lastName" /></label>
+        <label>Gender:<select data-kendo-bind="source: genders, value: gender"></select></label>
+        <label><input type="checkbox" data-kendo-bind="checked: agreed" />I have read the licence agreement</label>
+        <button data-kendo-bind="enabled: agreed, click: register">Register</button>
+        <div data-kendo-bind="visible: confirmed">
+            <h4>Confirmation</h4>
+            <div>
+                Thank you for your registration, <span data-kendo-bind="text: firstName"></span><span data-kendo-bind="text: lastName"></span>
+                <br />
+                <br />
+                <button data-kendo-bind="click: startOver">Start Over</button>
+            </div>
+        </div>
+    </form>
+    <!--div data-bind="compose: 'plugins/welcome/viewmodels/welcome'"></div-->
+</section>

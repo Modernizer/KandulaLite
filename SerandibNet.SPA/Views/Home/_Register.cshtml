@@ -1,0 +1,88 @@
+﻿@model SerandibNet.SPA.Models.RegisterModel
+<div id="signup-box" class="signup-box widget-box no-border">
+    <div class="widget-body">
+        <div class="widget-main">
+            <h4 class="header green lighter bigger">
+                <i class="icon-group blue"></i>
+                New User Registration 123
+            </h4>
+
+            <div class="space-6"></div>
+            <p>Enter your details to begin: </p>
+
+            @using (Html.BeginForm("JsonRegister", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { Id = "registerForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <label class="block clearfix">
+                        <span class="block input-icon input-icon-right">
+                            @Html.TextBoxFor(m => m.Email, new { autofocus = "autofocus", id = "email", @class = "form-control", type = "email", placeholder = "Email" })
+                            <i class="icon-envelope"></i>
+                        </span>
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "help-block", style = "color:red;" })
+                    </label>
+
+                    <label class="block clearfix">
+                        <span class="block input-icon input-icon-right">
+                            @Html.TextBoxFor(m => m.UserName, new { id = "registerName", type = "text", @class = "form-control", placeholder = "Username" })
+                            <i class="icon-user"></i>
+                        </span>
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "help-block", style = "color:red;" })
+                    </label>
+
+
+                    <label class="block clearfix">
+                        <span class="block input-icon input-icon-right">
+
+                            @Html.PasswordFor(m => m.Password, new { id = "password", @class = "form-control", type = "password", placeholder = "Password" })
+                            <i class="icon-lock"></i>
+                        </span>
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "help-block", style = "color:red;" })
+                    </label>
+
+
+                    <label class="block clearfix">
+                        <span class="block input-icon input-icon-right">
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", type = "password", placeholder = "Repeat password" })
+                            <i class="icon-retweet"></i>
+                        </span>
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "help-block", style = "color:red;" })
+                    </label>
+
+                    <label class="block">
+                        <input type="checkbox" class="ace" />
+                        <span class="lbl">I accept the
+															<a href="#">User Agreement</a>
+                        </span>
+                    </label>
+
+                    <div class="space-24"></div>
+
+                    <div class="clearfix">
+                        <button type="reset" class="width-30 pull-left btn btn-sm">
+                            <i class="icon-refresh"></i>
+                            Reset
+                        </button>
+
+                        <button type="submit" class="width-65 pull-right btn btn-sm btn-success">
+                            Register
+															<i class="icon-arrow-right icon-on-right"></i>
+                        </button>
+                    </div>
+                </fieldset>
+            }
+        </div>
+
+        <div class="toolbar center">
+            <a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+                <i class="icon-arrow-left"></i>
+                Back to login
+            </a>
+        </div>
+    </div>
+    <!-- /widget-body -->
+</div>
+<!-- /signup-box -->
+
+
+

@@ -1,0 +1,6 @@
+﻿<section>
+    <h2 data-bind="html: displayName"></h2>
+    <button data-bind="click: navigate">Navigate</button>
+    <div data-bind="compose: { model: 'apps/component-a/viewmodels/component-a', activate: true, afterCompose: composeCompleted }"></div>
+    <div data-bind="compose: { model: 'apps/component-b/viewmodels/component-b', activate: true, afterCompose: composeCompleted }"></div>
+</section>

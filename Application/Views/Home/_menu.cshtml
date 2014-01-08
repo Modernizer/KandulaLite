@@ -1,0 +1,114 @@
+﻿@*Roles : Merchandiser  (chamara),ProductionManager (samudra),PurchasingManager(hasitha),StoreManager(hirushan)*@
+<ul class="nav nav-list">
+
+    <li id="li-dashboard" class="active menu-item">
+        <a href="javascript:void(0);">
+            <i class="icon-dashboard"></i>
+            <span class="menu-text">Dashboard </span>
+        </a>
+    </li>
+    @if (User.IsInRole("Merchandiser") || User.IsInRole("ProductionManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file"></i>
+                <span class="menu-text">Customer Orders</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                @if (User.IsInRole("Merchandiser"))
+                {
+                    <li id="li-manage-customer" class="menu-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-double-angle-right"></i>
+                            Manage customer(s)
+                        </a>
+                    </li>
+                }
+                <li id="li-manage-order" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Manage Orders
+                    </a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (User.IsInRole("StoreManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-list"></i>
+                <span class="menu-text">Inventory</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li id="li-inventory-req" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Inventory requests
+                    </a>
+                </li>
+                <li id="li-temp-PR-list" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Purchasing list
+                    </a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (User.IsInRole("PurchasingManager") || User.IsInRole("StoreManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file-alt"></i>
+                <span class="menu-text">PR</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                @if (User.IsInRole("PurchasingManager"))
+                {
+                    <li id="li-PR" class="menu-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-double-angle-right"></i>
+                            Pending PR List
+                        </a>
+                    </li>
+                }
+@*PR summary will be available for both roles (functionalities will be different)*@
+                <li id="li-PR-All" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        PR Summary
+                    </a>
+                </li>
+            </ul>
+        </li>
+                if (User.IsInRole("PurchasingManager"))
+                {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file"></i>
+                <span class="menu-text">Quotations</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li id="li-call-qutation" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Call quotations
+                    </a>
+                </li>
+                <li id="li-receive-qutation" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Quotation received
+                    </a>
+                </li>
+            </ul>
+        </li>
+                }
+    }
+
+</ul>

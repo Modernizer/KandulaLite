@@ -1,0 +1,87 @@
+.auto-complete {
+    background: transparent;
+    border: groove;
+    width: 70%;
+    text-align: center;
+}
+
+.tooltip-container {
+	width: 600px;
+	margin: 100px auto;
+	position: relative;
+}
+
+.settings-bar {
+    width:100%;
+    display: block;
+    margin-right:2px;
+    margin-top:2px;
+    z-index: -1;
+}
+
+.settings-button {
+	opacity: 0.7;
+	z-index: 2;
+	display: block;
+    float:right;
+    width:30px;
+    height:18px;
+
+    background-image: url(../Content/images/dropdown.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.settings-button:hover, .pressed {
+	background-color: transparent;
+	opacity: 1;
+	cursor: pointer;
+	z-index: 2;
+}
+
+/* Special grid styles
+-------------------------------------------------- */
+
+.show-grid [class*="col-md-"] {
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;
+  border: dashed;
+border-width: 1px;
+padding: 0px 5px 0px 5px;
+}
+
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="col-md-"] {
+  margin-top: 5px;
+  border: dashed;
+border-width: 1px;
+padding: 0px 5px 0px 5px;
+}
+.show-grid [class*="col-md-"] [class*="col-md-"] {
+  background-color: #ccc;
+  border: dashed;
+border-width: 1px;
+padding: 0px 5px 0px 5px;
+}
+.show-grid [class*="col-md-"] [class*="col-md-"] [class*="col-md-"] {
+  background-color: #999;
+  border: dashed;
+border-width: 1px;
+padding: 0px 5px 0px 5px;
+}
+
+.show-grid [class*="col-md-"] [class*="col-md-"] [class*="col-md-"] [class*="col-md-"] {
+  background-color: rgb(119, 117, 117);
+  border: dashed;
+border-width: 1px;
+padding: 0px 5px 0px 5px;
+}
+

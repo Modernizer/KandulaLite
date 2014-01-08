@@ -1,0 +1,38 @@
+﻿<div class="profile-feed row-fluid">
+    <div class="span6">
+        @foreach (var item in Model)
+        {
+            <div class="profile-activity clearfix">
+                <div>
+                    <img class="pull-left" src="~/Content/application/images/avatar2.png" alt="avatar">
+                    <a class="user" href="#">@item.Sender</a>
+                    <span class="span-message" @(!item.IsRead ? "style=font-weight:bold;" : "")>@item.Message</span>
+
+                    <a href="javascript:void(0);" onclick="ChangeNotificationStatus(@item.Id,@(item.IsRead ? "true" : "false"),this)">
+                        @if (!item.IsRead)
+                        {
+                            <text>mark as read</text>
+                        }
+                        else
+                        {
+                            <text>mark as unread</text>
+                        }
+                    </a>
+
+                    <div class="time">
+                        <i class="icon-time bigger-110"></i>
+                        @item.SentOn
+                    </div>
+                </div>
+                <div class="tools action-buttons">
+                    <a class="blue" href="#">
+                        <i class="icon-pencil bigger-125"></i>
+                    </a>
+                    <a class="red" href="#">
+                        <i class="icon-remove bigger-125"></i>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

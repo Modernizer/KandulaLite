@@ -1,0 +1,149 @@
+﻿@*Roles : Merchandiser  (chamara),ProductionManager (samudra),PurchasingManager(hasitha),StoreManager(hirushan)*@
+<ul class="nav nav-list">
+
+    <li id="li-dashboard" class="active menu-item">
+        <a href="javascript:void(0);">
+            <i class="icon-dashboard"></i>
+            <span class="menu-text">Dashboard </span>
+        </a>
+    </li>
+    @if (User.IsInRole("Merchandiser") || User.IsInRole("ProductionManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file"></i>
+                <span class="menu-text">Customer Orders</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                @if (User.IsInRole("Merchandiser"))
+                {
+                    <li id="li-manage-customer" class="menu-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-double-angle-right"></i>
+                            Manage customer(s)
+                        </a>
+                    </li>
+                }
+                <li id="li-manage-order" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Manage Orders
+                    </a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (User.IsInRole("ProductionManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-puzzle-piece"></i>
+                <span class="menu-text">Prduction</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li id="li-schedule" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        production scheduling
+                    </a>
+                </li>
+            </ul>
+        </li>
+    }
+
+    @if (User.IsInRole("StoreManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-list"></i>
+                <span class="menu-text">Inventory</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li id="li-inventory-req" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Raw materials requests
+                    </a>
+                </li>
+                <li id="li-temp-PR-list" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Purchasing list
+                    </a>
+                </li>
+                <li id="li-grn" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Pending GRN
+                    </a>
+                </li>
+                <li id="li-frn" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Pending FRN
+                    </a>
+                </li>
+            </ul>
+        </li>
+    }
+    @if (User.IsInRole("PurchasingManager"))
+    {
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file-alt"></i>
+                <span class="menu-text">Orders</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+
+                <li id="li-PR" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Pending PR List
+                    </a>
+                </li>
+
+                <li id="li-PO" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        PO List
+                    </a>
+                </li>
+
+                <li id="li-DO" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        DO List
+                    </a>
+                </li>
+            </ul>
+        </li>
+               
+        <li>
+            <a class="dropdown-toggle" href="javascript:void(0);">
+                <i class="icon-file"></i>
+                <span class="menu-text">Quotations</span>
+                <b class="arrow icon-angle-down"></b>
+            </a>
+            <ul class="submenu" style="display: none;">
+                <li id="li-call-qutation" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Call quotations
+                    </a>
+                </li>
+                <li id="li-receive-qutation" class="menu-item">
+                    <a href="javascript:void(0);">
+                        <i class="icon-double-angle-right"></i>
+                        Quotation received
+                    </a>
+                </li>
+            </ul>
+        </li>
+              
+    }
+
+</ul>

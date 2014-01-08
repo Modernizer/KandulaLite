@@ -1,0 +1,12 @@
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Logic.dll.config
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Logic.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Logic.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Data.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Model.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\EntityFramework.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Data.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\SerandibNet.Model.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\bin\Debug\EntityFramework.xml
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\obj\Debug\SerandibNet.Logic.csprojResolveAssemblyReference.cache
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\obj\Debug\SerandibNet.Logic.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Logic\obj\Debug\SerandibNet.Logic.pdb

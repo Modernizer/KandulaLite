@@ -1,0 +1,9 @@
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.dll.config
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.pdb
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.xml
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.dll
+C:\Samudra\v6\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.pdb

@@ -1,0 +1,32 @@
+﻿<li class="light-blue">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        <img class="nav-user-photo" alt="Jason's Photo" src="~/Content/application/images/user.png">
+        <span class="user-info">
+            <small>Welcome, </small>
+            @Membership.GetUser().UserName
+
+        </span>
+        <i class="icon-caret-down"></i>
+    </a>
+    <ul class="user-menu dropdown-menu dropdown-yellow dropdown-caret dropdown-close pull-right">
+        <li>
+            <a href="javascript:void(0);">
+                <i class="icon-cog"></i>
+                Settings
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">
+                <i class="icon-user"></i>
+                Profile
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="@Url.Action("LogOff", "Account")">
+                <i class="icon-off"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+</li>

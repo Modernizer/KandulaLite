@@ -1,0 +1,162 @@
+﻿@model SerandibNet.SPA.Models.LoginModel
+@{
+    ViewBag.Title = "SerandibNet Application Portal";
+}
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;
+    }
+}
+
+<div id="main-content">
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <!--top bar-->
+        <div id="navbar" class="navbar navbar-default">
+            <div id="navbar-container" class="navbar-container">
+                <!--company name & logo-->
+                <div class="navbar-header pull-left">
+                    <a class="navbar-brand" href="~/">
+                        <small>
+                            <img src="~/Content/themes/base/images/bottle.png" alt="logo" style="height: 22px;" />
+                            KandulaLite (NorthWind POC)
+                        </small>
+                    </a>
+                </div>
+                <!--user related details-->
+                <div class="navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        @*<!--notifications box-->
+                        @Html.Action("Notifications", "User")
+
+                        <!--message box-->
+                        @Html.Action("Messages", "User")*@
+
+                        <!--user menu-->
+                        @Html.Action("UserMenu", "User")
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!--content area-->
+    
+        <div id="main-container" class="main-container">
+            <div class="main-container-inner">
+                <!--responsive menu toggler-->
+                <a id="menu-toggler" class="menu-toggler" href="javascript:void(0);">
+                    <span class="menu-text"></span>
+                </a>
+                <!--side menu-->
+                <div id="sidebar" class="sidebar">
+                    <!--menu-->
+                    @Html.Partial("_menu")
+                    <!--toggle menu-->
+                    <div id="sidebar-collapse" class="sidebar-collapse">
+                        <i class="icon-double-angle-left" data-icon2="icon-double-angle-right" data-icon1="icon-double-angle-left"></i>
+                    </div>
+                </div>
+                <div id="right-sidebar" class="sidebar" style="float:right;margin:10px;padding:10px;border:dotted;width:180px; height:500px">
+
+                </div>
+
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="row">
+                            <!--body will be rendered to this div based on the selected menu item-->
+                            <div id="div-render-body" class="col-xs-10">
+                                @* home page content*@
+                                <div id="applicationHost" style="background-color: #ffffff; width: 100%; height: 0px">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+   
+    
+  
+        <a id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse" href="#">
+            <i class="icon-double-angle-up icon-only bigger-110"></i>
+        </a>
+        <script src="html5/scripts/require.js" data-main="html5/App/main"></script>
+    }
+    else
+    {
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <title>Login Page - Saranet Portal</title>
+            <meta name="description" content="User login page" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+
+        <body class="login-layout">
+            <div class="main-container">
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <div class="login-container">
+                                <div class="center">
+                                    <h1>
+                                        <i class="icon-leaf green"></i>
+                                        <span class="red">SarandibNet</span>
+                                        <span class="white">Portal</span>
+                                    </h1>
+                                    <h4 class="blue">&copy; XYZ Company</h4>
+                                </div>
+                                <div class="space-6"></div>
+                                <div class="position-relative">
+                                    @Html.Partial("_Login")
+                                    @Html.Partial("_Register")
+                                </div>
+                                <!-- /position-relative -->
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </div>
+            <!-- /.main-container -->
+
+            <!-- basic scripts -->
+
+            <!--[if !IE]> -->
+
+            <!-- <![endif]-->
+
+            <!--[if IE]>
+        <script type="text/javascript">
+         window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+        </script>
+        <![endif]-->
+
+            <!-- inline scripts related to this page -->
+
+            <script type="text/javascript">
+                function show_box(id) {
+                    jQuery('.widget-box.visible').removeClass('visible');
+                    jQuery('#' + id).addClass('visible');
+                }
+            </script>
+        </body>
+        </html>
+    }
+</div>
+
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/todo")
+    }
+}

@@ -1,0 +1,19 @@
+﻿using SarandibNet.Data.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SarandibNet.Logic.Core.Generic
+{
+    public class Delete<Entity> : BaseService<Entity, Entity> where Entity : class, IIdentifier 
+    {
+        public Delete(IUnitOfWork uow) : base(uow) { }
+
+        public override Entity Execute(Entity entity)
+        {
+            return UnitOfWork.GetEntityRepository<Entity>().Delete(entity);
+        }
+    }
+}

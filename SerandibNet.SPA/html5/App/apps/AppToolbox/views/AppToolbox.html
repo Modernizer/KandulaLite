@@ -1,0 +1,145 @@
+﻿<section>
+            <div>
+                
+                <!--Share with:
+                <div data-bind="foreach:userList">
+                    <label>
+                        <input type="checkbox" name="users" data-bind="value:Name" />
+                        <span data-bind="text: Name"></span>
+                    </label>
+                </div>-->
+            </div>
+
+            <div class="btn-toolbar no-border">
+                <div class="row">
+                   <div class="col-lg-4">
+                        Application Name: <input type="text" data-bind="value:name">
+                       </div>
+                    <div class="col-lg-1">
+                        <div class="btn-group pull-left">
+                            <button class="btn btn-sm btn-success" id="btn-save" type="button">
+                                <i class=" icon-ok bigger-110">
+                                </i>
+                                Save
+                            </button>
+
+                           
+                        </div>
+                    </div>
+              </div>
+                       </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="widget-box">
+                                <div class="widget-header">
+                                    <div class="btn-toolbar no-border">
+
+                                        <ul class="nav nav-tabs pull-left" id="myTab">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#view">View</a>
+                                            </li>
+
+                                            <li class="">
+                                                <a data-toggle="tab" href="#viewmodel">View Model</a>
+                                            </li>
+
+                                            <li class="">
+                                                <a data-toggle="tab" href="#share">Share</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="widget-body">
+                                <div class="widget-main padding-0">
+                                    <div class="tab-content">
+                                        <div id="view" class="tab-pane active">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <div class="widget-header header-color-green">
+                                                        <h5 class="bigger lighter">
+                                                            <i class="icon-table"></i>
+                                                            View
+                                                        </h5>
+
+
+                                                    </div>
+                                                    <!-- Codes by HTML.am -->
+                                                    <textarea data-bind='value: viewCode' name="view" style="width:100%" rows="35">
+                                                        // Enter your view here
+                                                    </textarea>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="viewmodel" class="tab-pane">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="widget-header header-color-green">
+                                                        <h5 class="bigger lighter">
+                                                            <i class="icon-table"></i>
+                                                            View Model
+                                                        </h5>
+
+
+                                                    </div>
+                                                    <textarea data-bind='value: viewModelCode' name="viewmodel" style="width:100%" rows="35"></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="share" class="tab-pane">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="widget-header header-color-green">
+                                                        <h5 class="bigger lighter">
+                                                            <i class="icon-table"></i>
+                                                            Share
+                                                        </h5>
+                                                    </div>
+                                                    
+
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <td class="kolabel">Select Userers:</td>
+                                                            <td><select multiple="multiple" data-bind="options: optionValuesUsers, selectedOptions: multipleSelectedOptionValuesUsers" style="width:150px"></select></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="kolabel">Select Applications:</td>
+                                                            <td><select multiple="multiple" data-bind="options: optionValuesApps, selectedOptions: multipleSelectedOptionValuesApps" style="width:150px"></select></td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <button class="btn btn-sm btn-success pull-right" id="btn-share" type="button">
+                                                                    <i class=" icon-ok bigger-110">
+                                                                    </i>
+                                                                    Share
+                                                                </button>
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </table>
+
+
+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+</section>

@@ -1,0 +1,24 @@
+.pagerNext {
+    float: right;
+}
+
+.pagerPrevious {
+    float: right;
+}
+
+.toolbar {
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+section {
+    padding-top: 0px !important;
+}
+
+.form-horizontal .control-label {
+    padding-top: 10px;
+}
+
+.control-group div {
+    text-align: left !important;
+}

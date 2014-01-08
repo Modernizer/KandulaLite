@@ -1,0 +1,94 @@
+﻿<div>
+<div style="padding: 20px;">
+    <input type="button" id="btnManageParams" data-kendo-bind="click:manageParams" value="Manage Params">
+    <input type="button" id="btnSave" data-kendo-bind="click:saveLayout" value="Save">
+    <span data-kendo-bind="text:message"></span>
+</div>
+
+<!-- this is the element in to the app-editor components will be injected -->
+<div id="app-editor-host" class="container-fluid" ></div>
+
+<!-- render a set of rows -->
+<script id="row-template" type="text/x-kendo-template">
+    <div class="row-fluid show-grid" style="padding: 0px; margin: 0px">
+        # for (var i = 0; i < data.columns.length; i++) { #
+            #= kendo.render(kendo.template($("\\#col-template").html()), [data.columns[i]]) #
+        # } #  
+    </div>     
+</script>
+ 
+<!-- render a column -->
+<script id="col-template" type="text/x-kendo-template">
+    <div class="span#= span # show-grid placeholder" data-uniqueid="#= guid #" style="height: #= height #px">
+        <div class='settings-bar'>
+             #= kendo.render(kendo.template($("\\#menu-template").html()), [data.guid]) #
+        </div>
+        # if (data.rows) { #
+            # for (var j = 0; j < data.rows.length; j++) { #
+                #= kendo.render(kendo.template($("\\#row-template").html()), [data.rows[j]]) #
+            # } #  
+        # } #
+
+        # if (data.tabs && data.tabs.length > 0) { #
+            #= kendo.render(kendo.template($("\\#tab-template").html()), [data.tabs]) #
+        # } #
+
+        # if (data.component) { #
+            #= kendo.render(kendo.template($("\\#comp-template").html()), [data.component]) #
+        # } #
+    </div>
+</script>
+
+<!-- render the component -->
+<script id="comp-template" type="text/x-kendo-template">
+    <table class="table table-bordered table-condensed">
+        <tbody>
+        <tr><td>App Id</td><td>#= data.applicationID # </td></tr>
+        <tr><td>Name</td><td>#= data.name # </td></tr>
+        <tr><td>Status</td><td>#= data.status #</td></tr>
+        <tr><td>App Match</td><td>#= data.applicationMatch # </td></tr>
+        </tbody>
+    </table>
+</script>
+
+<!-- render an array of tabs -->
+<script id="tab-template" type="text/x-kendo-template">
+    <div class="layout-editor-tabstrip" style="border: none; background: transparent;">
+        <ul style="text-align: left;">
+            # for (var k = 0; k < data.length; k++) { #
+                # if(k === 0) { #
+                    <li class="k-state-active">#= data[k].title #</li>
+                # } else { #
+                    <li>#= data[k].title #</li>
+                # } #
+            # } #
+        </ul>
+        # for (var k = 0; k < data.length; k++) { #
+            #= kendo.render(kendo.template($("\\#row-template").html()), [data[k].rows[0]]) #
+        # } #
+    </div>
+</script>
+
+<!-- render the settings menu of a column -->
+<script id="menu-template" type="text/x-kendo-template">
+    <div class="navbar" style="margin-bottom: 0px">
+        <ul class="nav pull-right">
+            <li class="dropdown">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown"><div class="settings-button"></div></a>
+            <ul class="dropdown-menu">
+                <li><a class="menu-button-split" data-uniqueid="#= data #">Split</a></li>
+                <li><a class="menu-button-addchild" data-uniqueid="#= data #">Add a Row</a></li>
+                <li><a class="menu-button-addtab" data-uniqueid="#= data #">Add a Tab</a></li>
+                <li class="divider"></li>
+                <li><a class="menu-button-delete" data-uniqueid="#= data #">Delete</a></li>
+                <li class="divider"></li>
+                <li><a class="menu-button-setcomp" data-uniqueid="#= data #">Set Component</a></li>
+                <li><a class="menu-button-compclear" data-uniqueid="#= data #">Clear Component</a></li>
+                <li><a class="menu-button-settheme" data-uniqueid="#= data #">Set Theme</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+</script>    
+               
+</div>

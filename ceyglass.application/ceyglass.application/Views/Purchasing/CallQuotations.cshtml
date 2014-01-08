@@ -1,0 +1,108 @@
+﻿@{
+    Layout = null;
+}
+@*NOTE :: this is dummy page for demonstration*@
+<style type="text/css">
+    .quotation-selected-item
+    {
+        float: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+</style>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Title </label>
+        <div class="col-sm-9">
+            <input id="txt-title" class="col-xs-10 col-sm-5" type="text" placeholder="title">
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Due date </label>
+        <div class="col-sm-9">
+            <input type="text" id="datepicker-duedate" />
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Items&nbsp;<small>(UOM- metric tons)</small> </label>
+        <div class="col-sm-9">
+            <select id="select-items" multiple>
+                <option></option>
+                <option uom="g" value="1">Dolomite</option>
+                <option uom="g" value="2">Silica</option>
+                <option uom="g" value="3">Soda ash</option>
+                <option uom="g" value="4">Felspar</option>
+                <option uom="g" value="5">Cullets</option>
+            </select>
+            <button id="btn-add-items" class="btn btn-info btn-xs">
+                <i class="icon-check bigger-110"></i>add selected items
+            </button>
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Quotation Item(s)</label>
+        <!--initially set a message-->
+        <div id="div-qutation-selected-item-list" class="col-sm-9">
+            <span class="label label-warning arrowed-in-right arrowed">select items for quotation</span>
+        </div>
+
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Suppliers </label>
+        <div class="col-sm-9">
+            <select id="select-suppliers" multiple>
+                <option></option>
+                <option value="1">Sunil Traders</option>
+                <option value="2">ABS (pvt) Ltd</option>
+                <option value="3">Amanda Services</option>
+                <option value="4">Hokandara Hardwares</option>
+                <option value="5">MAGA</option>
+                <option value="6">Sunimal Enterprises</option>
+                <option value="7">CB (pvt) Ltd</option>
+                <option value="8">ABC Hardwares</option>
+            </select>
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Description </label>
+        <div class="col-sm-9">
+            <textarea id="txt-description" class="col-xs-10 col-sm-5"></textarea>
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right">Attachment</label>
+        <div class="col-sm-9">
+            <div class="ace-file-input col-sm-6">
+                <input id="file-attachment" type="file">
+            </div>
+        </div>
+    </div>
+    <div class="space-4"></div>
+
+    <div class="clearfix form-actions">
+        <div class="col-md-offset-3 col-md-9">
+            <button id="btn-submit" class="btn btn-info" type="button">
+                <i class="icon-ok bigger-110"></i>
+                Submit
+            </button>
+            <button id="btn-clear" class="btn" type="reset">
+                <i class="icon-undo bigger-110"></i>
+                Reset
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/erp/call_quotation.js"></script>
