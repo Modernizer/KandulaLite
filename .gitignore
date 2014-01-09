@@ -1,4 +1,3 @@
-/ceyglass.application/ceyglass.application/bin
 /SerandibNet.API/obj
 /SerandibNet.Data/obj
 /SerandibNet.Test/obj
@@ -6,3 +5,8 @@
 /SerandibNet.SPA/obj
 /*.suo
 /SerandibNet.Model/obj
+/SerandibNet.Data/bin
+/SerandibNet.Test/bin
+/SerandibNet.SPA/bin
+/SerandibNet.Model/bin
+/SerandibNet.Logic/bin
