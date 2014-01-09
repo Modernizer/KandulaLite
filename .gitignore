@@ -5,6 +5,7 @@
 /SerandibNet.SPA/obj
 /*.suo
 /SerandibNet.Model/obj
+/SerandibNet.API/bin
 /SerandibNet.Data/bin
 /SerandibNet.Test/bin
 /SerandibNet.SPA/bin
