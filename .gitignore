@@ -3,8 +3,8 @@
 /SerandibNet.Test/obj
 /SerandibNet.Logic/obj
 /SerandibNet.SPA/obj
-/*.suo
 /SerandibNet.Model/obj
+/*.suo
 /SerandibNet.API/bin
 /SerandibNet.Data/bin
 /SerandibNet.Test/bin
