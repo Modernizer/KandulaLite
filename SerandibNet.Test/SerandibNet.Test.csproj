@@ -105,10 +105,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SerandibNet.API\SerandibNet.API.csproj">
-      <Project>{7ea9d703-b408-47c2-a452-559b1261ac3b}</Project>
-      <Name>SerandibNet.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SerandibNet.Data\SerandibNet.Data.csproj">
       <Project>{053c06af-b952-449b-bef0-2b9a50900a9b}</Project>
       <Name>SerandibNet.Data</Name>

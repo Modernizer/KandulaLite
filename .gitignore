@@ -1,1 +1,7 @@
 /ceyglass.application/ceyglass.application/bin
+/SerandibNet.API/obj
+/SerandibNet.Data/obj
+/SerandibNet.Test/obj
+/SerandibNet.Logic/obj
+/SerandibNet.SPA/obj
+*.suo

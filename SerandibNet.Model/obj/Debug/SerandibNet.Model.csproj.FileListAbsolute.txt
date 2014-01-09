@@ -7,3 +7,12 @@ C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.xml
 C:\Samudra\v6\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Samudra\v6\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.dll
 C:\Samudra\v6\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.pdb
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.dll.config
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.dll
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\SerandibNet.Model.pdb
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.dll
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.xml
+D:\projects\SarandibNet\SerandibNet.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\projects\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.dll
+D:\projects\SarandibNet\SerandibNet.Model\obj\Debug\SerandibNet.Model.pdb
