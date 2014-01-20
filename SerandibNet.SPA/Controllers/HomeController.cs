@@ -132,14 +132,14 @@ namespace SerandibNet.SPA.Controllers
             Uow = (UnitOfWork)UowFactory.CreateUnitOfWork("DefaultConnectionServer");
             var repository = Uow.GetEntityRepository<Application>();
 
-           
 
-            Application tester = new Application() { GUID = Guid.NewGuid(), Name="app-editor" };
+
+            Application tester = new Application() { GUID = Guid.NewGuid(), Name = "app-editor", ModifiedTime = DateTime.Now };
             //Insert
             var inserted = repository.InsertOrUpdate(tester);
             Uow.Commit();
 
-            Application tester1 = new Application() { GUID = Guid.NewGuid(), Name = "ChartDesigner" };
+            Application tester1 = new Application() { GUID = Guid.NewGuid(), Name = "ChartDesigner", ModifiedTime = DateTime.Now };
             //Insert
             var inserted1 = repository.InsertOrUpdate(tester1);
             Uow.Commit(); 

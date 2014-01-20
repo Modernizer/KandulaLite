@@ -78,7 +78,7 @@ namespace SerandibNet.Test.Data
 
         [TestMethod]
         public void TestCrudApplication() {
-            Application app = new Application() { GUID = Guid.NewGuid(), Name = "MyApp1" };
+            Application app = new Application() { GUID = Guid.NewGuid(), Name = "MyApp1", ModifiedTime = DateTime.Now };
             crudEntity(app);
         }
 

@@ -29,6 +29,8 @@ namespace SarandibNet.Data
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Dashboard> Dashboards { get; set; }
+        public DbSet<ApplicationViewModel> ApplicationViewModels { get; set; }
+        public DbSet<ApplicationView> ApplicationViews { get; set; }
         public DbSet<Application> Application { get; set; }
         public DbSet<DashboardForUser> DashboardForUser { get; set; }
 

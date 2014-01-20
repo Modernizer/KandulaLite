@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Core\IIdentifier.cs" />
     <Compile Include="Entities\Application.cs" />
+    <Compile Include="Entities\ApplicationView.cs" />
+    <Compile Include="Entities\ApplicationViewModel.cs" />
     <Compile Include="Entities\Component.cs" />
     <Compile Include="Entities\ComponentExecution.cs" />
     <Compile Include="Entities\ComponentProgress.cs" />
