@@ -141,7 +141,15 @@ namespace SerandibNet.SPA.Controllers
 
                 Uow = (UnitOfWork)UowFactory.CreateUnitOfWork("DefaultConnectionServer");
                 var repository = Uow.GetEntityRepository<Application>();
-                Application app = new Application() { GUID = Guid.NewGuid(), Name = name, ModifiedTime = DateTime.Now };
+                DateTime appModifiedTime = DateTime.Now;
+                Application app = new Application() { GUID = Guid.NewGuid(), Name = name, ModifiedTime = appModifiedTime };
+                ApplicationView appView = new ApplicationView() { GUID = Guid.NewGuid(), Contents = System.IO.File.ReadAllBytes(view_file), ModifiedTime = appModifiedTime };
+                ApplicationViewModel appViewModel = new ApplicationViewModel() { GUID = Guid.NewGuid(), Contents = System.IO.File.ReadAllBytes(viewmodel_file), ModifiedTime = appModifiedTime };
+
+                appView.ParentApplication = app;
+                appViewModel.ParentApplication = app;
+                app.AddApplicationView(appView);
+                app.AddApplicationViewModel(appViewModel);
 
                 var inserted_prod = repository.InsertOrUpdate(app);
                 Uow.Commit();

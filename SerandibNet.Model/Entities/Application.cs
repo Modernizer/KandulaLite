@@ -21,6 +21,25 @@ namespace SarandibNet.Model
         public virtual List<Dashboard> IncludedDashboard { get; set; }
         public virtual List<ApplicationView> ApplicationViews { get; set; }
         public virtual List<ApplicationViewModel> ApplicationViewModels { get; set; }
-        
+
+        public void AddApplicationView(ApplicationView view)
+        {
+            if (ApplicationViews == null)
+            {
+                ApplicationViews = new List<ApplicationView>();
+            }
+
+            ApplicationViews.Add(view);
+        }
+
+        public void AddApplicationViewModel(ApplicationViewModel viewModel)
+        {
+            if (ApplicationViewModels == null)
+            {
+                ApplicationViewModels = new List<ApplicationViewModel>();
+            }
+
+            ApplicationViewModels.Add(viewModel);
+        }
     }
 }
