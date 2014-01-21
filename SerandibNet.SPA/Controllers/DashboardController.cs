@@ -125,8 +125,12 @@ namespace SerandibNet.SPA.Controllers
                 DirectoryInfo di_vm = Directory.CreateDirectory(path + "/viewmodels");
                 Debug.WriteLine("The directory was created successfully at {0}.", Directory.GetCreationTime(path));
 
-                String view_file = path + "\\views\\" + name + ".html";
-                String viewmodel_file = path + "\\viewmodels\\" + name + ".js";
+                String viewFileName = name + ".html";
+                String viewModelFileName = name + ".js";
+
+                String view_file = path + "\\views\\" + viewFileName;
+                String viewmodel_file = path + "\\viewmodels\\" + viewModelFileName;
+
                 if (!System.IO.File.Exists(view_file))
                 {
                     System.IO.File.WriteAllText(@view_file, v);
@@ -143,8 +147,10 @@ namespace SerandibNet.SPA.Controllers
                 var repository = Uow.GetEntityRepository<Application>();
                 DateTime appModifiedTime = DateTime.Now;
                 Application app = new Application() { GUID = Guid.NewGuid(), Name = name, ModifiedTime = appModifiedTime };
-                ApplicationView appView = new ApplicationView() { GUID = Guid.NewGuid(), Contents = System.IO.File.ReadAllBytes(view_file), ModifiedTime = appModifiedTime };
-                ApplicationViewModel appViewModel = new ApplicationViewModel() { GUID = Guid.NewGuid(), Contents = System.IO.File.ReadAllBytes(viewmodel_file), ModifiedTime = appModifiedTime };
+                ApplicationView appView = new ApplicationView() { GUID = Guid.NewGuid(), Name = viewFileName,
+                    Contents = System.IO.File.ReadAllBytes(view_file), ModifiedTime = appModifiedTime };
+                ApplicationViewModel appViewModel = new ApplicationViewModel() { GUID = Guid.NewGuid(), Name = viewModelFileName,
+                    Contents = System.IO.File.ReadAllBytes(viewmodel_file), ModifiedTime = appModifiedTime };
 
                 appView.ParentApplication = app;
                 appViewModel.ParentApplication = app;

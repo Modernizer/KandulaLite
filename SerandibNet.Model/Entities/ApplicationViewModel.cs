@@ -15,6 +15,7 @@ namespace SerandibNet.Model
         public Guid GUID { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }
+        public string Name { get; set; }
         public DateTime ModifiedTime { get; set; }
         public byte[] Contents { get; set; }
         public Application ParentApplication { get; set; }
