@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SarandibNet.Model.Entities;
+
 
 namespace SarandibNet.Data.Seed
 {
@@ -32,8 +32,8 @@ namespace SarandibNet.Data.Seed
             
             context.SaveChanges();
             */
-            context.Customers.Add(new Customer { GUID = Guid.NewGuid(), CustomerName = "N2", Email = "a@b.com", Address = "a11", PhoneNo = "dsdsds" });
-            context.SaveChanges();
+            //context.Customers.Add(new Customer { GUID = Guid.NewGuid(), CustomerName = "N2", Email = "a@b.com", Address = "a11", PhoneNo = "dsdsds" });
+            //context.SaveChanges();
         }
     }
 }

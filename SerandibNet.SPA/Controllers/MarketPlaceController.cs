@@ -9,16 +9,16 @@ using System.Web.Mvc;
 
 namespace SerandibNet.SPA.Controllers
 {
-    public class MarketPlaceController : Controller
-    {
-        public JsonResult SaveModel()
-        {
-            var employees = new List<Employee>
-                              {
-                                  new Employee{Id = 1, Name="Saman" },                                                                                                   
-                                  new Employee{Id = 2, Name = "Sujith"}
-                              };
-            return Json(employees, JsonRequestBehavior.AllowGet);
-        }
-    }
+    //public class MarketPlaceController : Controller
+    //{
+    //    public JsonResult SaveModel()
+    //    {
+    //        var employees = new List<Employee>
+    //                          {
+    //                              new Employee{Id = 1, Name="Saman" },                                                                                                   
+    //                              new Employee{Id = 2, Name = "Sujith"}
+    //                          };
+    //        return Json(employees, JsonRequestBehavior.AllowGet);
+    //    }
+    //}
 }

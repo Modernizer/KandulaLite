@@ -50,43 +50,11 @@
   <ItemGroup>
     <Compile Include="Core\IIdentifier.cs" />
     <Compile Include="Entities\Application.cs" />
+    <Compile Include="Entities\ApplicationForDashboard.cs" />
     <Compile Include="Entities\ApplicationView.cs" />
     <Compile Include="Entities\ApplicationViewModel.cs" />
-    <Compile Include="Entities\Component.cs" />
-    <Compile Include="Entities\ComponentExecution.cs" />
-    <Compile Include="Entities\ComponentProgress.cs" />
-    <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\Dashboard.cs" />
     <Compile Include="Entities\DashboardForUser.cs" />
-    <Compile Include="Entities\DeploymentTest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\Feature.cs" />
-    <Compile Include="Entities\FeatureExecution.cs" />
-    <Compile Include="Entities\FeatureProgress.cs" />
-    <Compile Include="Entities\IntigrateTest.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\ProductExecution.cs" />
-    <Compile Include="Entities\ProductProgress.cs" />
-    <Compile Include="Entities\Project.cs" />
-    <Compile Include="Entities\SoftwareProduct.cs" />
-    <Compile Include="Entities\Story.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\Task.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\TaskProgress.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\TimeEntry.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Entities\UnitTest.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Entities\AppUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

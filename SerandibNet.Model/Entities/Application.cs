@@ -18,7 +18,7 @@ namespace SarandibNet.Model
         public string Name { get; set; }
         public string Metadata { get; set; }
         public DateTime ModifiedTime { get; set; }
-        public virtual List<Dashboard> IncludedDashboard { get; set; }
+        
         public virtual List<ApplicationView> ApplicationViews { get; set; }
         public virtual List<ApplicationViewModel> ApplicationViewModels { get; set; }
 

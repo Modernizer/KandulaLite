@@ -8,7 +8,7 @@ using System.Data.Entity;
 using SarandibNet.Data.Core;
 using SarandibNet.Data;
 using SarandibNet.Model;
-using SarandibNet.Model.Entities;
+
 using System.Web.Security;
 using SerandibNet.SPA;
 using SerandibNet.Model;

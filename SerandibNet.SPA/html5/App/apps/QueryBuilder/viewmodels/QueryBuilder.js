@@ -178,8 +178,6 @@
 
 
         $('#btnInitDb').click(function () {
-
-
             
             var url = 'http://northwindpoc.azurewebsites.net/odata/';
 

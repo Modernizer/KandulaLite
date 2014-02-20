@@ -1,9 +1,9 @@
 ﻿
-$('#menu-madhu1-click').click(function (evt) {
-    //alert('Hello madhu1');
+//$('#menu-madhu1-click').click(function (evt) {
+//    //alert('Hello madhu1');
 
-    window.location = "/#dashboardMadhu";
-});
+//    window.location = "/#dashboardMadhu";
+//});
 
 $('#menu-madhu2-click').click(function (evt) {
     //alert('Hello madhu2');

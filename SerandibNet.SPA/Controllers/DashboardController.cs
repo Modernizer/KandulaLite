@@ -100,6 +100,8 @@ namespace SerandibNet.SPA.Controllers
             }
         }
 
+
+
         private static UnitOfWork Uow { get; set; }
 
         [HttpPost, ValidateInput(false)]
@@ -170,27 +172,11 @@ namespace SerandibNet.SPA.Controllers
             }
             finally { }
            
-            var employees = new List<Employee>
-                              {
-                                  new Employee{Id = 1, Name="Saman" },                                                                                                   
-                                  new Employee{Id = 2, Name = "Sujith"}
-                              };
-            return Json(new { Result = String.Format("Fist item in list: '{0}'", firstLetter ) });
+          
+            return Json("Successfull");
         }
   
-        public JsonResult InitDb()
-        {
-
-
-            //SerandibDBContext.initDataBase();
-            var employees = new List<Employee>
-                              {
-                                  new Employee{Id = 1, Name="Saman" },                                                                                                   
-                                  new Employee{Id = 2, Name = "Sujith"}
-                              };
-            return Json(employees, JsonRequestBehavior.AllowGet);
-
-        }
+       
 
         public JsonResult GetEmployeeJsonData()
         {
@@ -291,6 +277,44 @@ namespace SerandibNet.SPA.Controllers
 
             return results;
         }
+
+        public JsonResult GetDBperUserJsonData()
+        {
+            var currentUser = User.Identity.Name;
+            Uow = (UnitOfWork)UowFactory.CreateUnitOfWork("DefaultConnectionServer");
+            var repository = Uow.GetEntityRepository<DashboardForUser>();
+            var alldashboards = repository.GetAll();
+            alldashboards = alldashboards.Where(t => t.UserName == currentUser);
+
+           
+           // var query = alldashboards.Select(t => new { Name = t.dashboardName, Apps = getApps(t.dashboardName) });
+            var q = new List<object>();
+            foreach (DashboardForUser x in alldashboards) {
+                q.Add(new { Name = x.dashboardName, Apps = getApps(x.dashboardName) });
+
+            }
+
+            //q.Add(new { Name = "Madhu", Apps = "app1,app2" });
+            //q.Add(new { Name = "Samu", Apps = "app1,app2" });
+            return Json(q, JsonRequestBehavior.AllowGet);
+
+        }
+        public string getApps(String DashboardName)
+        {
+            Uow = (UnitOfWork)UowFactory.CreateUnitOfWork("DefaultConnectionServer");
+            var repository = Uow.GetEntityRepository<ApplicationForDashboard>();
+            var allapps = repository.GetAll();
+            allapps = allapps.Where(t => t.dashboardName == DashboardName);
+            string applist = "";
+            foreach (var app in allapps)
+            {
+                applist = applist + "," + app.AppName;
+            }
+
+            return applist;
+
+        }
+
 
     }
 }
