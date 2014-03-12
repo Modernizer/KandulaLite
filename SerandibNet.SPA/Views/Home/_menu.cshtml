@@ -6,123 +6,124 @@
 @*Roles : Merchandiser  (chamara),ProductionManager (samudra),PurchasingManager(hasitha),StoreManager(hirushan)*@
 
 @*@{string [] Dashboards =["Home", "DashboardSamudra", "DashboardMadhu"]; }*@
-<ul id="dashboardlist" class="nav nav-list">
-
-
-
-    <li id="home" class="active menu-item">
-        <a id="home" href="javascript:void(0);">
-            <i class="icon-dashboard"></i>
-            <span class="menu-text">Home</span>
-        </a>
-    </li>
-  
-    @* This application list should be dynamic and appended to end of dashboard list
-        Can be replaced by search*@
-    <li>
-        <a href=" javascript:void(0);" class="dropdown-toggle">
-            <i class="icon-desktop"></i>
-            <span class="menu-text">Applications </span>
-
-            <b class="arrow icon-angle-down"></b>
-        </a>
-
-        <ul id="adminsubmenu" class="submenu">
-            <li>
-                <a href="#ContactsEditor">
-                    <i class="icon-double-angle-right"></i>
-                    Data Viewer
-                </a>
-            </li>
-            <li>
-                <a href="#ChartDesigner">
-                    <i class="icon-double-angle-right"></i>
-                    Chart Viewer
-                </a>
-            </li>
-
-            <li>
-                <a href="#shoppingCart">
-                    <i class="icon-double-angle-right"></i>
-                    Production Performance
-                </a>
-            </li>
-            <li>
-                <a href="#demoworkspace">
-                    <i class="icon-double-angle-right"></i>
-                    Stock Status
-                </a>
-            </li>
-        </ul>
-    </li>
-</ul>
-
-<script>
-    var dashboard;
-    var applist;
-
-    
-    var ul = document.getElementById("dashboardlist");
-    $.getJSON("/Dashboard/GetDBperUserJsonData", null, function (data) {
-        $.each(data, function (i, item) {
-            console.log(item);
-            dashboard = item.Name;
-            applist = item.Apps;
-            //Dashboards.push(item.Name);
-
-            // this.drowmenu();
-            var menuId = "menu-" + dashboard + "-click";
-            var menuHref = "/#" + dashboard;
-            var listOfApps = applist.split(",");
-
-            var newLi = document.createElement("li");
-            newLi.setAttribute("id", dashboard);
-            newLi.setAttribute("class", "active menu-item");
-
-            var newA = document.createElement("a");
-            newA.setAttribute("id", menuId);
-            newA.setAttribute("class", "dropdown-toggle");
-            newA.setAttribute("href", menuHref);
-
-            newA.innerHTML = "<i class='icon-dashboard'></i><span class='menu-text'>"+dashboard + "</span>"
-            newLi.appendChild(newA);
-            var subUl = document.createElement("ul");
-            subUl.setAttribute("id", "submenu-" + dashboard);
-            subUl.setAttribute("class", "submenu");
-            subUl.setAttribute("style", "display: none;");
-
-            for (i = 0; i < listOfApps.length; i++) {
-                //  alert(listOfApps[i]);
-                var subHref = "/#" + listOfApps[i];
-                var subLi = document.createElement("li");
-                subLi.setAttribute("id", "li-" + listOfApps[i]);
-                subLi.setAttribute("class", "menu-item");
-                var subA = document.createElement("a");
-                subA.setAttribute("href", subHref);
-                subLi.appendChild(subA);
-                subA.innerHTML = "<i class='icon-double-angle-right'></i>" + listOfApps[i];
-                subUl.appendChild(subLi);
-            }
-            newLi.appendChild(subUl);
-            ul.appendChild(newLi);
-
-
-        });
-    });
-
-
-
-</script>
-
 <div>
-    <label>Search Applications</label>
+    <ul id="dashboardlist" class="nav nav-list">
+
+
+
+        <li id="home" class="active menu-item">
+            <a id="home" href="javascript:void(0);">
+                <i class="icon-dashboard"></i>
+                <span class="menu-text">Home</span>
+            </a>
+        </li>
+
+        @* This application list should be dynamic and appended to end of dashboard list
+            Can be replaced by search*@
+        <li>
+            <a href=" javascript:void(0);" class="dropdown-toggle">
+                <i class="icon-desktop"></i>
+                <span class="menu-text">Applications </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul id="adminsubmenu" class="submenu">
+                <li>
+                    <a href="#ContactsEditor">
+                        <i class="icon-double-angle-right"></i>
+                        Data Viewer
+                    </a>
+                </li>
+                <li>
+                    <a href="#ChartDesigner">
+                        <i class="icon-double-angle-right"></i>
+                        Chart Viewer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#shoppingCart">
+                        <i class="icon-double-angle-right"></i>
+                        Production Performance
+                    </a>
+                </li>
+                <li>
+                    <a href="#demoworkspace">
+                        <i class="icon-double-angle-right"></i>
+                        Stock Status
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        var dashboard;
+        var applist;
+
+
+        var ul = document.getElementById("dashboardlist");
+        $.getJSON("/Dashboard/GetDBperUserJsonData", null, function (data) {
+            $.each(data, function (i, item) {
+                console.log(item);
+                dashboard = item.Name;
+                applist = item.Apps;
+                //Dashboards.push(item.Name);
+
+                // this.drowmenu();
+                var menuId = "menu_" + dashboard + "_click";
+                var menuHref = "/#dashboard" + dashboard;
+                var listOfApps = applist.split(",");
+
+                var newLi = document.createElement("li");
+                newLi.setAttribute("id", dashboard);
+                newLi.setAttribute("class", "active menu-item");
+
+                var newA = document.createElement("a");
+                newA.setAttribute("id", menuId);
+                newA.setAttribute("class", "dropdown-toggle");
+                newA.setAttribute("href", menuHref);
+
+                newA.innerHTML = "<i class='icon-dashboard'></i><span class='menu-text'>" + dashboard + "</span>"
+                newLi.appendChild(newA);
+                var subUl = document.createElement("ul");
+                subUl.setAttribute("id", "submenu-" + dashboard);
+                subUl.setAttribute("class", "submenu");
+                subUl.setAttribute("style", "display: none;");
+
+                for (i = 0; i < listOfApps.length; i++) {
+                    //  alert(listOfApps[i]);
+                    var subHref = "/#" + listOfApps[i];
+                    var subLi = document.createElement("li");
+                    subLi.setAttribute("id", "li-" + listOfApps[i]);
+                    subLi.setAttribute("class", "menu-item");
+                    var subA = document.createElement("a");
+                    subA.setAttribute("href", subHref);
+                    subLi.appendChild(subA);
+                    subA.innerHTML = "<i class='icon-double-angle-right'></i>" + listOfApps[i];
+                    subUl.appendChild(subLi);
+                }
+                newLi.appendChild(subUl);
+                ul.appendChild(newLi);
+
+            });
+        });
+
+
+
+    </script>
+
     <div>
-        @Html.AutocompleteFor(m => m.searchedApp, "Autocomplete", "Home")
+        <label>Search Apps</label>
+        <div class="search-input">
+            @Html.AutocompleteFor(m => m.searchedApp, "Autocomplete", "Home")
+
+        </div>
+        <button>Add</button>
     </div>
-    <button>Add</button>
+
+
 </div>
-
-
-
 
 

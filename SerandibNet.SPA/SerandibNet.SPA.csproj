@@ -337,6 +337,14 @@
     <Content Include="html5\App\apps\AppDesigner\views\AppDesigner.html" />
     <Content Include="html5\App\apps\DashboardDesigner\viewmodels\DashboardDesigner.js" />
     <Content Include="html5\App\apps\DashboardDesigner\views\DashboardDesigner.html" />
+    <Content Include="html5\App\apps\dashboardProductionTools\viewmodels\dashboardProductionTools.js" />
+    <Content Include="html5\App\apps\dashboardProductionTools\views\dashboardProductionTools.html" />
+    <Content Include="html5\App\apps\dashboardDataTools\viewmodels\dashboardDataTools.js" />
+    <Content Include="html5\App\apps\dashboardDataTools\views\dashboardDataTools.html" />
+    <Content Include="html5\App\apps\dashboardProfileManager\viewmodels\dashboardProfileManager.js" />
+    <Content Include="html5\App\apps\dashboardProfileManager\views\dashboardProfileManager.html" />
+    <Content Include="html5\App\apps\dashboardAdminTools\viewmodels\dashboardAdminTools.js" />
+    <Content Include="html5\App\apps\dashboardAdminTools\views\dashboardAdminTools.html" />
     <Content Include="html5\App\apps\profileAdmin\viewmodels\profileAdmin.js" />
     <Content Include="html5\App\apps\profileAdmin\views\profileAdmin.html" />
     <Content Include="html5\App\apps\profileProdMgr\viewmodels\profileProdMgr.js" />

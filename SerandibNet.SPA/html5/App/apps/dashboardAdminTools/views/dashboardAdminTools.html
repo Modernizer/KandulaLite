@@ -1,0 +1,27 @@
+﻿<section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" style="background-color: green;"  >
+            <!--max-height:50px;-->
+          <h4>App Designer</h4>
+            <div data-bind="compose: { model: 'apps/AppDesigner/viewmodels/AppDesigner', compositionComplete: composeCompleted }">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 example-block" style="background-color:greenyellow">
+            <h4>Dashboard Designer</h4>
+            <div data-bind="compose: { model: 'apps/DashboardDesigner/viewmodels/DashboardDesigner', compositionComplete: composeCompleted }">
+            </div>
+        </div>
+        <div class="col-lg-6 example-block" style="background-color:red">
+            <h4>Add User</h4>
+            <div data-bind="compose: { model: 'apps/AddUser/viewmodels/AddUser', compositionComplete: composeCompleted }">
+            </div> 
+          </div>
+        </div>
+    </div>
+
+    
+</section>

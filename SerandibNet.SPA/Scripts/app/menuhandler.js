@@ -52,3 +52,20 @@ $('#menu_admin_profile_click').click(function (evt) {
 $('#menu_prodmgr_profile_click').click(function (evt) {
     window.location = "/#profileProdMgr";
 });
+
+$('#menu_ProfileManager_click').click(function (evt) {
+    window.location = "/#dashboardProfileManager";
+});
+
+$('#menu_AdminTools_click').click(function (evt) {
+    window.location = "/#dashboardAdminTools";
+});
+
+$('#menu_DataTools_click').click(function (evt) {
+    window.location = "/#dashboardDataTools";
+});
+
+$('#menu_ProductionTools_click').click(function (evt) {
+    window.location = "/#dashboardProductionTools";
+});
+
